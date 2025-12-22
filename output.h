@@ -2,8 +2,8 @@
 #define OUTPUT_H
 
 #include <stdio.h>
-#include "FirstPass.h"
-#include "SecondPass.h"
+#include "firstPass.h"
+#include "secondPass.h"
 
 /* Prototypes */
 void createEntFile(const char *input_file_name);

@@ -4,7 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include "Constants.h"
+#include "constants.h"
 #include "helpingFunction.h"
 #include "macroContext.h"
 

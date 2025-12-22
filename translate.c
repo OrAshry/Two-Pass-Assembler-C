@@ -1,4 +1,4 @@
-#include "Translate.h"
+#include "translate.h"
 
 /**
  * @brief Frees the memory used by the machine code and data image arrays.

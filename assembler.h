@@ -1,9 +1,9 @@
 #ifndef ASSEMBLER_H
 #define ASSEMBLER_H
 
-#include "MacroProcessing.h"
-#include "FirstPass.h"
-#include "SecondPass.h"
+#include "macroProcessing.h"
+#include "firstPass.h"
+#include "secondPass.h"
 #include "output.h"
 
 #endif

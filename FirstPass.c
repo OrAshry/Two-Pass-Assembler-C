@@ -1,4 +1,4 @@
-#include "FirstPass.h"
+#include "firstPass.h"
 
 table_ptr found = NULL;                           /* Recive the address of the symbol inside the table*/
 table_ptr head_ptr = NULL;                        /* The poiner to the head of the table*/

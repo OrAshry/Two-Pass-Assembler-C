@@ -2,9 +2,9 @@
 #define LINEPARSER_H
 
 #include "macroContext.h"
-#include "MacroProcessing.h"
+#include "macroProcessing.h"
 #include "stringSplit.h"
-#include "Constants.h"
+#include "constants.h"
 #include <ctype.h>
 #include <string.h>
 #include "helpingFunction.h"
