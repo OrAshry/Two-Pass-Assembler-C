@@ -5,6 +5,15 @@ The assembler reads custom assembly language files (.as) and translates them int
 
 ---
 
+## 🛠 Technologies & Concepts
+
+- **Language**: C (ANSI C)
+- **Build System**: Makefile
+- **Data Structures**: Linked Lists, Symbol Tables
+- **Concepts**: Two-pass Compilation, Bitwise Operations, Memory Management (`malloc`/`free`)
+
+---
+
 ## 📂 Features
 
 - **First Pass**: Parse assembly code, collect labels, and calculate memory addresses.
@@ -48,7 +57,18 @@ Generated output:
 - example.ent — Entry symbols (if any)
 - example.ext — External symbols (if any)
 
-___
+---
+
+### 📝 Sample Output (.ob file)
+
+The output displays the memory address followed by the machine code in base-8 (octal) or the specific format required by the architecture:
+
+```text
+0100  001432
+0101  000024
+0102  005610
+
+---
 
 🙋‍♂️ My Contribution
 
