@@ -1,4 +1,4 @@
-#include "SymbolTable.h"
+#include "symbolTable.h"
 
 /**
  * @brief a new symbol to the symbol table.

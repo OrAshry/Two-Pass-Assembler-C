@@ -3,7 +3,7 @@
 
 #include <string.h>
 #include <ctype.h>
-#include "constants.h"
+#include "Constants.h"
 
 /* Structure to hold the splitted string */
 struct string_split{

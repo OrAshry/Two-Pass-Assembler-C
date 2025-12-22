@@ -1,8 +1,8 @@
 #ifndef ASSEMBLER_H
 #define ASSEMBLER_H
 
-#include "macroProcessing.h"
-#include "firstPass.h"
+#include "MacroProcessing.h"
+#include "FirstPass.h"
 #include "SecondPass.h"
 #include "output.h"
 
