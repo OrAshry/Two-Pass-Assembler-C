@@ -5,6 +5,23 @@ The assembler reads custom assembly language files (.as) and translates them int
 
 ---
 
+🙋‍♂️ My Contribution
+
+This project was developed collaboratively.
+My primary contributions include:
+- Implementing the symbol table management (addSymbol.c, symbolTable.h, symbolSearch.c).
+- Building the first pass logic (firstPass.c) — parsing labels, instructions, and directives.
+- Developing the second pass (secondPass.c) — resolving addresses and external symbols.
+- Creating output file generation (output.c) for .ob, .ent, and .ext files.
+- Designing memory management functions (translate.c).
+- Creating octal output formatting (printFunction.c).
+- Writing or adapting the Makefile for easy compilation.
+- Overall, I focused on building the core logic for symbol management, machine code generation, and output formatting.
+  
+ This project received a grade of 90 at the university.
+
+---
+
 ## 🛠 Technologies & Concepts
 
 - **Language**: C (ANSI C)
@@ -68,23 +85,6 @@ The output displays the memory address followed by the machine code in base-8 (o
 0101  000024
 0102  005610
 ```
-
----
-
-🙋‍♂️ My Contribution
-
-This project was developed collaboratively.
-My primary contributions include:
-- Implementing the symbol table management (addSymbol.c, symbolTable.h, symbolSearch.c).
-- Building the first pass logic (firstPass.c) — parsing labels, instructions, and directives.
-- Developing the second pass (secondPass.c) — resolving addresses and external symbols.
-- Creating output file generation (output.c) for .ob, .ent, and .ext files.
-- Designing memory management functions (translate.c).
-- Creating octal output formatting (printFunction.c).
-- Writing or adapting the Makefile for easy compilation.
-- Overall, I focused on building the core logic for symbol management, machine code generation, and output formatting.
-  
- This project received a grade of 90 at the university.
 
 ---
 
