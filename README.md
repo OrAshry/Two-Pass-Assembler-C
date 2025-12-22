@@ -67,6 +67,7 @@ The output displays the memory address followed by the machine code in base-8 (o
 0100  001432
 0101  000024
 0102  005610
+```
 
 ---
 
