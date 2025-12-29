@@ -8,7 +8,7 @@
 *.am
 
 # Executables
-prog
+assembler
 
 # Mac OS system files
 .DS_Store

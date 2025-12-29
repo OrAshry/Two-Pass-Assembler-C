@@ -1,15 +1,21 @@
-# Compilation macros
+# Compiler and Flags
 CC = gcc
-CFLAGS = -std=c89 -ansi -pedantic -Wall # Flags
-SRC_FILES = helpingFunction.c lineParser.c firstPass.c addSymbol.c printFunction.c symbolSearch.c secondPass.c stringSplit.c macroProcessing.c output.c assembler.c translate.c
-OBJ_FILES = $(SRC_FILES:.c=.o)
+CFLAGS = -ansi -Wall -pedantic
 
-## Executable
-prog: $(OBJ_FILES)
-	$(CC) $(CFLAGS) $(OBJ_FILES) -o $@
+# List of object files needed for the build
+# (Updated to match the lowercase filenames in src folder)
+OBJS = assembler.o firstPass.o secondPass.o macroProcessing.o \
+       addSymbol.o symbolSearch.o translate.o output.o \
+       stringSplit.o lineParser.o helpingFunction.o printFunction.o
 
-%.o: %.c
-	$(CC) -c $< $(CFLAGS) -o $@
+# Main target: Link object files to create the executable
+assembler: $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o assembler
 
+# Pattern rule: Compile .c files from 'src' directory into object files
+%.o: src/%.c
+	$(CC) -c $(CFLAGS) $< -o $@
+
+# Clean up build artifacts and generated output files
 clean:
-	rm -rf *.o prog
+	rm -f *.o tests/*.ob tests/*.ent tests/*.ext tests/*.am assembler
