@@ -1,28 +1,30 @@
 # C Assembler
 
 A two-pass assembler written in C, developed as part of a university C course.  
-The assembler reads custom assembly language files (.as) and translates them into machine code output files.
+The assembler reads custom assembly language files (`.as`) and translates them into machine code output files.
 
 ---
 
-🙋‍♂️ My Contribution
+## My Contribution
 
 This project was developed collaboratively.
 My primary contributions include:
-- Implementing the symbol table management (addSymbol.c, symbolTable.h, symbolSearch.c).
-- Building the first pass logic (firstPass.c) — parsing labels, instructions, and directives.
-- Developing the second pass (secondPass.c) — resolving addresses and external symbols.
-- Creating output file generation (output.c) for .ob, .ent, and .ext files.
-- Designing memory management functions (translate.c).
-- Creating octal output formatting (printFunction.c).
-- Writing or adapting the Makefile for easy compilation.
-- Overall, I focused on building the core logic for symbol management, machine code generation, and output formatting.
+
+- **Symbol Table Management**: Implemented logic in `src/addSymbol.c`, `src/symbolTable.h`, and `src/symbolSearch.c`.
+- **First Pass Logic**: Built `src/firstPass.c` — parsing labels, instructions, and directives.
+- **Second Pass Logic**: Developed `src/secondPass.c` — resolving addresses and external symbols.
+- **Output Generation**: Created `src/output.c` for `.ob`, `.ent`, and `.ext` files.
+- **Memory Management**: Designed memory translation functions in `src/translate.c`.
+- **Formatting**: Created octal output formatting in `src/printFunction.c`.
+- **Build System**: Wrote the Makefile for easy compilation.
+
+Overall, I focused on building the core logic for symbol management, machine code generation, and output formatting.
   
- This project received a grade of 90 at the university.
+**Grade Received:** 90
 
 ---
 
-## 🛠 Technologies & Concepts
+## Technologies & Concepts
 
 - **Language**: C (ANSI C)
 - **Build System**: Makefile
@@ -31,7 +33,7 @@ My primary contributions include:
 
 ---
 
-## 📂 Features
+## Features
 
 - **First Pass**: Parse assembly code, collect labels, and calculate memory addresses.
 - **Second Pass**: Resolve symbols, generate final machine code, and handle external references.
@@ -44,39 +46,45 @@ My primary contributions include:
 
 ---
 
-## 🚀 How to Compile
 
-Use the Makefile provided:
+## How to Compile and Run
+
+### 1. Build the Project
+
+The project uses a Makefile to compile source files from the `src/` directory. Run:
 ```bash
 make
 ```
-or manually compile:
+Alternatively, you can manually compile (pointing to the src folder):
 ```bash
-gcc *.c -o assembler
+gcc -ansi -Wall -pedantic src/*.c -o assembler
 ```
-This will generate an executable named assembler.
-
-___
-
-🛠 How to Run
-
-Run the assembler with one or more .as files:
-```bash
-./assembler file1.as file2.as ...
-```
-For each input file, the assembler generates corresponding output files if no errors are found.
-
-📄 Example
-
-Input file: example.as
-Generated output:
-- example.ob — Machine code
-- example.ent — Entry symbols (if any)
-- example.ext — External symbols (if any)
+This will generate the assembler executable in the root directory.
 
 ---
 
-### 📝 Sample Output (.ob file)
+### 2. Run the Assembler
+
+Run the executable with test files located in the `tests/` folder. Note: Pass the file name without the .as extension.
+Example:
+```bash
+./assembler tests/test_integration_basic
+```
+
+---
+
+### 3. Check Output
+
+If successful, the assembler will generate the following files inside the `tests/` folder:
+Generated output:
+- filename.am — Macro-expanded assembly file (created after pre-processing)
+- filename.ob — Machine code (Object file)
+- filename.ent — Entry symbols
+- filename.ext — External symbols
+
+---
+
+### 4. Sample Output (.ob file)
 
 The output displays the memory address followed by the machine code in base-8 (octal) or the specific format required by the architecture:
 
@@ -88,7 +96,15 @@ The output displays the memory address followed by the machine code in base-8 (o
 
 ---
 
-📈 Project Status
+### 5. Clean Up
+
+To remove compiled object files and generated output files from both `src/` and `tests/` directories:
+
+```bash
+make clean
+```
+
+Project Status
 
 - Fully working and tested with multiple assembly input files.
 - Demonstrates strong understanding of assembler logic, file handling, memory management, and C programming.
