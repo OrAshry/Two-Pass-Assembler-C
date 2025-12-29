@@ -5,6 +5,7 @@
 *.ob
 *.ent
 *.ext
+*.am
 
 # Executables
 prog
